@@ -172,7 +172,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"titulo\" : \"Libro Genérico 1\",\r\n    \"fecha\" : 9112020,\r\n    \"genero\": \"Comedia\",\r\n    \"paginas\": 250,\r\n    \"autores\": [\r\n        {\r\n            \"nombre\": \"Fabián\",\r\n            \"apellido\": \"Ruiz\",\r\n            \"biografia\": \"Aquí estaría la biografía de Fabián Ruiz... si tuviera una\"\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"titulo\" : \"Libro Inventado\",\r\n    \"fecha\" : 12122015,\r\n    \"genero\": \"Fantasía\",\r\n    \"paginas\": 300,\r\n    \"autores\": [\r\n        {\r\n            \"nombre\": \"Carlos\",\r\n            \"apellido\": \"Perez\",\r\n            \"biografia\": \"Bibliografía totalmente inventada...\"\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -288,7 +288,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{local-link}}/api/personas"
+						"url": "{{local-link}}/api/domicilios"
 					},
 					"response": []
 				},
