@@ -1,0 +1,497 @@
+{
+	"info": {
+		"_postman_id": "79ac4e92-448f-4143-b7e9-bca327d529a3",
+		"name": "TpApiRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30264777"
+	},
+	"item": [
+		{
+			"name": "personas",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{local-link}}/api/personas"
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{local-link}}/api/personas"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Pepe\",\r\n    \"apellido\": \"Lopez\",\r\n    \"dni\": 42213455,\r\n    \"domicilio\": {\r\n        \"calle\": \"Calle Inventada\",\r\n        \"número\": 123,\r\n        \"localidad\": {\r\n            \"id\": 1,\r\n            \"denominacion\": \"San Martín\"\r\n        }\r\n    },\r\n    \"libros\": [\r\n        {\r\n            \"titulo\" : \"Libro inventado\",\r\n            \"fecha\" : 12122015,\r\n            \"genero\": \"Fantasía\",\r\n            \"paginas\": 300,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"nombre\": \"Carlos\",\r\n                    \"apellido\": \"Perez\",\r\n                    \"biografia\": \"Bibliografía totalmente inventada...\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"titulo\" : \"Otro Libro inventado\",\r\n            \"fecha\" : 13122017,\r\n            \"genero\": \"Terror\",\r\n            \"paginas\": 300,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 2,\r\n                    \"nombre\": \"Carla\",\r\n                    \"apellido\": \"Perez\",\r\n                    \"biografia\": \"Biografía invantadísima...  B)\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+						},
+						"url": "{{local-link}}/api/personas"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Pepe\",\r\n    \"apellido\": \"Honguito\",\r\n    \"dni\": 55555555        \r\n}"
+						},
+						"url": "{{local-link}}/api/personas"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{local-link}}/api/personas"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "autores",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{local-link}}/api/autores"
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{local-link}}/api/autores"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Carlos\",\r\n    \"apellido\": \"Perez\",\r\n    \"biografia\": \"Bibliografía totalmente inventada...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{local-link}}/api/autores"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Carlos\",\r\n    \"apellido\": \"Lopez\",\r\n    \"biografia\": \"Bibliografía totalmente inventada...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{local-link}}/api/autores"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{local-link}}/api/autores"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "libros",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{local-link}}/api/libros"
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{local-link}}/api/libros"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\" : \"Libro Genérico 1\",\r\n    \"fecha\" : 9112020,\r\n    \"genero\": \"Comedia\",\r\n    \"paginas\": 250,\r\n    \"autores\": [\r\n        {\r\n            \"nombre\": \"Fabián\",\r\n            \"apellido\": \"Ruiz\",\r\n            \"biografia\": \"Aquí estaría la biografía de Fabián Ruiz... si tuviera una\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{local-link}}/api/libros"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"titulo\" : \"Libro Inventado\",\r\n    \"fecha\" : 12122015,\r\n    \"genero\": \"Terror\",\r\n    \"paginas\": 300,\r\n    \"autores\": [\r\n        {\r\n            \"nombre\": \"Carlos\",\r\n            \"apellido\": \"Perez\",\r\n            \"biografia\": \"Bibliografía totalmente inventada...\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{local-link}}/api/libros"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{local-link}}/api/libros"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "localidad",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{local-link}}/api/localidades"
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{local-link}}/api/localidades"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"denominacion\": \"San Matín\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{local-link}}/api/localidades"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"denominacion\": \"Maipú\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{local-link}}/api/localidades"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{local-link}}/api/localidades"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "domicilios",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{local-link}}/api/personas"
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{local-link}}/api/domicilios"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"calle\": \"Calle inventada\",\r\n        \"número\": 111,\r\n        \"localidad\": {\r\n            \"id\": 1,\r\n            \"denominacion\": \"San Martín\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{local-link}}/api/domicilios"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"calle\": \"Calle inventada\",\r\n        \"número\": 111,\r\n        \"localidad\": {\r\n            \"id\": 1,\r\n            \"denominacion\": \"San Martín\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{local-link}}/api/domicilios"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{local-link}}/api/domicilios"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ejemplos para la carga de datos",
+			"item": [
+				{
+					"name": "localidad 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"denominacion\": \"San Martín\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{local-link}}/api/localidades"
+					},
+					"response": []
+				},
+				{
+					"name": "localidad 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"denominacion\": \"Maipú\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{local-link}}/api/localidades"
+					},
+					"response": []
+				},
+				{
+					"name": "autor 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Carlos\",\r\n    \"apellido\": \"Perez\",\r\n    \"biografia\": \"Bibliografía totalmente inventada...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{local-link}}/api/autores"
+					},
+					"response": []
+				},
+				{
+					"name": "autor 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Carla\",\r\n    \"apellido\": \"Perez\",\r\n    \"biografia\": \"Biografía invantadísima...  B)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{local-link}}/api/autores"
+					},
+					"response": []
+				},
+				{
+					"name": "autor 3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Gabriel\",\r\n    \"apellido\": \"Perez\",\r\n    \"biografia\": \"Biografía inventada 3, otra biografía genérica mas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{local-link}}/api/autor"
+					},
+					"response": []
+				},
+				{
+					"name": "persona 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Pepe\",\r\n    \"apellido\": \"Lopez\",\r\n    \"dni\": 42213455,\r\n    \"domicilio\": {\r\n        \"calle\": \"Calle Inventada\",\r\n        \"número\": 123,\r\n        \"localidad\": {\r\n            \"id\": 1,\r\n            \"denominacion\": \"San Martín\"\r\n        }\r\n    },\r\n    \"libros\": [\r\n        {\r\n            \"titulo\" : \"Libro inventado\",\r\n            \"fecha\" : 12122015,\r\n            \"genero\": \"Fantasía\",\r\n            \"paginas\": 300,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"nombre\": \"Carlos\",\r\n                    \"apellido\": \"Perez\",\r\n                    \"biografia\": \"Bibliografía totalmente inventada...\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"titulo\" : \"Otro Libro inventado\",\r\n            \"fecha\" : 13122017,\r\n            \"genero\": \"Terror\",\r\n            \"paginas\": 300,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 2,\r\n                    \"nombre\": \"Carla\",\r\n                    \"apellido\": \"Perez\",\r\n                    \"biografia\": \"Biografía invantadísima...  B)\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{local-link}}/api/personas"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "render-link",
+			"value": "https://tp-api-thil.onrender.com",
+			"type": "string"
+		},
+		{
+			"key": "local-link",
+			"value": "http://localhost:8084",
+			"type": "string"
+		}
+	]
+}
